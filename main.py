@@ -42,7 +42,7 @@ async def get_tool_by_id(tool_id: Union[str, None] = None):
     return JSONResponse(content=response, status_code=200)
 
 # API GET PARA TODOS LAS HERRAMIENTAS
-@app.get("/api/tools", response_model=Tool)
+@app.get("/api/tools/get_all", response_model=Tool)
 async def get_all_tools():
     status = 200
     response = tool_list
